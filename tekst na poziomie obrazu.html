@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moja strona internetowa</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      overflow: auto; 
+    }
+
+    .tab {
+      display: none;
+    }
+
+    .tab.active {
+      display: block;
+    }
+
+    #catTab {
+      background: url('https://premium4animals.pl/upload/premium4/blog//Kot-ragdoll.jpeg') center/cover no-repeat;
+      height: 100vh;
+    }
+
+    #dogTab {
+      background: url("kot.jpg") center/cover no-repeat;
+      height: 2592px;
+      width: 1456px;
+    }
+    #huh{
+      background: url("https://scontent.fktw1-1.fna.fbcdn.net/v/t1.15752-9/412522223_3236830303276250_8699077667790041405_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=3I88KFN4FAAAX94BiFe&_nc_ht=scontent.fktw1-1.fna&oh=03_AdSB12TPCAT7HDuYlpZGpIdBk3Bp9y2yaoUiGbpSohsIbQ&oe=65BFB7A0") center/cover no-repeat;
+      height: 1420px;
+      width: 800px;
+    }
+    .tab-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px 25px;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .tab-btn:hover {
+      background-color: #45a049;
+    }
+    .zakladki {
+      display: none;
+    }
+    .obraz {
+      position: relative;
+      width: 300px;
+      top: 2px;
+    }
+    .tekst {
+      position: absolute;
+      top: -2px;
+      left: 35px;
+      color: black;
+      font-size: 20px;
+    }
+    .obraz2 {
+      position: relative;
+      width: 300px;
+      top: 5px;
+    }
+    .tekst2 {
+      position: absolute;
+      top: 2px;
+      left: 35px;
+      color: black;
+      font-size: 20px;
+    }
+    .obraz3 {
+      position: relative;
+      width: 300px;
+      top: 5px;
+    }
+    .tekst3 {
+      position: absolute;
+      top: 2px;
+      left: 35px;
+      color: black;
+      font-size: 20px;
+    }
+    .obraz4 {
+      position: relative;
+      width: 300px;
+      top: -3px;
+      left: -30px;
+    }
+    .tekst4 {
+      position: absolute;
+      top: 15px;
+      left: 65px;
+      color: black;
+      font-size: 20px;
+    }
+    .tekst5 {
+      font-size: 18px;
+    }
+    .NST{
+      left: 20px;
+    } 
+  </style>
+</head>
+<body>
+
+  <button class="tab-btn" onclick="openTab('catTab')">NST</button>
+  <button class="tab-btn" onclick="openTab('dogTab')">Pies</button>
+  <button class="tab=btn" onclick="openTab('huh')">KOT</button>
+
+  <div id="catTab" class="tab active">
+    <h2>Noworudzka Szkoła Techniczna</h2>
+      <div class="NST">
+        <img src="C:\Users\adria\Desktop\nst\305118124_1074395396674822_6021970299040819855_n-removebg-preview.png" width="300" height="300">
+      </div>
+      <h3>Kontakt</h3>
+      <div class="obraz">
+    
+        <img src="C:\Users\adria\Desktop\nst\tekst na poziomie\png-transparent-email-email-thumbnail-removebg-preview.png" width="30" height="21" alt="Opis obrazu">
+        <div class="tekst">szkola@zsp.nowaruda.pl</div>
+      </div>
+      <div class="obraz2">
+        <img src="C:\Users\adria\Desktop\nst\Black_telephone_icon_from_DejaVu_Sans.svg.png" width="30" height="24">
+        <div class="tekst2">074-8722242</div>
+      </div>
+      <div class="obraz3">
+        <img src="C:\Users\adria\Desktop\nst\png-transparent-black-camera-computer-icons-fax-symbol-fax-icon-miscellaneous-photocopier-line-thumbnail-removebg-preview.png" width="30" height="24">
+        <div class="tekst3">074-8729414</div>
+      </div>
+      <div class="obraz4">
+        <img src="C:\Users\adria\Desktop\nst\gratis-png-google-maps-computadora-iconos-simbolo-marcador-de-mapa-removebg-preview.png" width="90" heigth="51">
+        <div class="tekst4">ul.Stara Droga 4<br /> Nowa Ruda<br/>Dolnośląskie<br/>57-401
+        </div>
+      </div>
+      <p>‏‏‎ ‎</p>
+      <h3>Patron naszej szkoły</h3>
+      <div class="tekst5">Patronem naszej szkoły jest Stanisław Staszic</div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Stanisław_Staszic.PNG">
+    </div>
+  </div>
+  <div id="dogTab" class="tab"></div>
+  <div id="huh" class="tab"></div>
+
+  <script>
+    function openTab(tabName) {
+      var tabs = document.querySelectorAll('.tab');
+      tabs.forEach(function(tab) {
+        tab.classList.remove('active');
+      });
+
+      var activeTab = document.getElementById(tabName);
+      activeTab.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
